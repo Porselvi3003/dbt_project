@@ -1,0 +1,13 @@
+DBT_PROJECT:
+  outputs:
+    dev:
+      account: doc31033.us-east-1
+      database: DBT_LEARNING
+      password: Porselvi@123456789
+      role: ACCOUNTADMIN
+      schema: DBT_SCHEMA
+      threads: 4
+      type: snowflake
+      user: PORSELVI
+      warehouse: COMPUTE_WH
+  target: dev

@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: sources          # The logical name used inside dbt
+    database: DBT_LEARNING              # The physical database in your warehouse
+    schema: DBT_SCHEMA        # The physical schema in your warehouse
+    tables:
+      - name: fact_sales
+      - name: fact_returns
+      - name: dim_date
+      - name: dim_store
+      - name: dim_product
+      - name: dim_customer
+
+      
