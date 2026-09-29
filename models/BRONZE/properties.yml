@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: bronze_store
+    columns:
+      - name: store_sk
+        data_tests:
+          - unique
+          - not_null
+      - name: store_name
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Megamart Manhattan', 'Megamart Brooklyn', 'Megamart Austin', 'Megamart San Jose', 'Megamart Toronto']
+              config:
+                severity: warn
+      - name: country
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["USA", "Canada"]
+              config:
+                severity: warn
+
+  - name: bronze_sales
+    columns:
+      - name: gross_amount
+        data_tests:
+          - non_negative:
+              config:
+                severity: warn
