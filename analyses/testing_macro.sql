@@ -1,0 +1,1 @@
+select {{multiply(50,20)}}
